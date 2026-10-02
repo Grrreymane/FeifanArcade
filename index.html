@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>非凡街机厅 · Feifan Arcade</title>
+<meta name="description" content="Feifan 的游戏作品集">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#140e24">
+<link rel="icon" href="favicon.png">
+<meta property="og:title" content="非凡街机厅 · Feifan Arcade">
+<meta property="og:description" content="三款可以直接玩的像素游戏 · Three playable pixel-art games">
+<meta property="og:image" content="og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen&family=ZCOOL+QingKe+HuangYou&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="gated">
+<div class="gate" id="gate" hidden>
+  <form class="gate-box" id="gate-form" autocomplete="off">
+    <div class="marquee-sign">
+      <h1 class="h-display">非凡街机厅</h1>
+      <div class="sub">FEIFAN ARCADE</div>
+    </div>
+    <label class="gate-label" for="gate-pw">请输入密码 · Password</label>
+    <input class="gate-input" id="gate-pw" type="password" autocomplete="current-password" required>
+    <button class="btn" type="submit"><span class="coin-ico"></span>投币进入 · Enter</button>
+    <p class="gate-err" id="gate-err" role="alert"></p>
+  </form>
+</div>
+<header class="topbar">
+  <a class="brand" href="#/" aria-label="Home">
+    <span class="brand-coin" aria-hidden="true"></span>
+    <span class="brand-zh" data-i18n="brand"></span>
+    <span class="brand-en">FEIFAN ARCADE</span>
+  </a>
+  <nav class="topnav">
+    <a href="#/" data-i18n="nav.games"></a>
+    <button class="lang" id="lang" type="button" aria-label="Switch language"><span data-l="zh">中</span><span data-l="en">EN</span></button>
+  </nav>
+</header>
+
+<main id="app"></main>
+
+<footer class="foot">
+  <span>© 2026 Feifan</span>
+  <span class="foot-sep">·</span>
+  <span data-i18n="foot"></span>
+</footer>
+
+<div class="modal" id="player" hidden>
+  <div class="modal-back" data-close></div>
+  <div class="player-wrap">
+    <div class="player-bar">
+      <span class="player-title" id="player-title"></span>
+      <a class="player-ext" id="player-ext" target="_blank" rel="noopener" data-i18n="player.newtab"></a>
+      <button class="player-x" type="button" data-close aria-label="Close">✕</button>
+    </div>
+    <div class="phone"><iframe id="player-frame" title="Game" allow="autoplay; fullscreen"></iframe></div>
+    <p class="player-hint" data-i18n="player.hint"></p>
+  </div>
+</div>
+
+<div class="modal" id="lightbox" hidden>
+  <div class="modal-back" data-close></div>
+  <figure class="lb-fig">
+    <img id="lb-img" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+  <button class="lb-nav lb-prev" type="button" aria-label="Previous">◀</button>
+  <button class="lb-nav lb-next" type="button" aria-label="Next">▶</button>
+  <button class="player-x lb-x" type="button" data-close aria-label="Close">✕</button>
+</div>
+
+<script src="locked.js"></script>
+<script src="gate.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>非凡街机厅 · 来玩！</title>
+<meta name="description" content="Feifan 下班后捣鼓的几个像素小游戏，点开就能玩。">
+<meta name="theme-color" content="#140e24">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../favicon.png">
+<meta property="og:title" content="非凡街机厅 · 来玩！">
+<meta property="og:description" content="下班后捣鼓的几个像素小游戏，点开就能玩～">
+<meta property="og:image" content="../og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen&family=ZCOOL+QingKe+HuangYou&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="play.css">
+</head>
+<body class="friends">
+<header class="topbar">
+  <span class="brand">
+    <span class="brand-coin" aria-hidden="true"></span>
+    <span class="brand-zh">非凡街机厅</span>
+    <span class="brand-en">FEIFAN ARCADE</span>
+  </span>
+  <span class="coins" id="coins" aria-live="polite"></span>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="marquee-sign">
+        <div class="bulbs"></div>
+        <h1 class="h-display">非凡街机厅</h1>
+        <div class="sub">FEIFAN ARCADE</div>
+        <div class="bulbs"></div>
+      </div>
+      <p class="hero-intro" id="greet"></p>
+      <div class="insert">INSERT COIN ▸</div>
+    </div>
+  </section>
+  <section class="floor"><div class="wrap"><div class="cabinets" id="cabinets"></div></div></section>
+</main>
+
+<footer class="foot">做游戏的人：Feifan · 玩得开心，有 bug 记得告诉我</footer>
+
+<div class="modal" id="player" hidden>
+  <div class="modal-back" data-close></div>
+  <div class="player-wrap">
+    <div class="player-bar">
+      <span class="player-title" id="player-title"></span>
+      <a class="player-ext" id="player-ext" target="_blank" rel="noopener">新窗口打开 ↗</a>
+      <button class="player-x" type="button" data-close aria-label="关闭">✕</button>
+    </div>
+    <div class="phone"><iframe id="player-frame" title="游戏" allow="autoplay; fullscreen"></iframe></div>
+    <p class="player-hint">关掉窗口也没关系，存档会自动保存 · Esc 关闭</p>
+  </div>
+</div>
+
+<script src="games.js"></script>
+<script src="play.js"></script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+{
+  "slug": "fishy-tails",
+  "title": {
+    "zh": "渔喵传说",
+    "en": "Fishy Tails"
+  },
+  "tagline": {
+    "zh": "猫猫钓鱼 · 吃 Buff · 打海怪",
+    "en": "A cat, a rod, and a sea full of monsters."
+  },
+  "genre": {
+    "zh": "竖屏像素钓鱼 · 轻肉鸽 + 小馆经营",
+    "en": "Vertical pixel-art fishing · light roguelite + café sim"
+  },
+  "play_url": "https://grrreymane.github.io/FishyTails/",
+  "cover": "cover.png",
+  "summary": {
+    "zh": "一只戴渔夫帽的猫，从阳光浅滩一路钓到海底龙宫，最后和海龙王拔河。只有一个操作：按住收线，线红松手；每种鱼给一个 Buff，一局里越钓越强。钓到的鱼存进冰箱，在海边栈桥上的渔喵小馆做成菜，卖给小猫、家猫和穿西装的大猫。",
+    "en": "A cat in a bucket hat fishes its way from sunny shallows down to an undersea dragon palace, ending in a tug-of-war with the Dragon King. There is only one control: hold to reel, let go when the line turns red. Every species grants a buff, so each run snowballs. Your catch goes into the cooler of a seaside café on a pier, where it is cooked and served to kittens, house cats and big cats in suits."
+  },
+  "stats": [
+    {
+      "value": "9",
+      "label": {
+        "zh": "片海域，各有主题音乐",
+        "en": "seas, each with its own theme"
+      }
+    },
+    {
+      "value": "36",
+      "label": {
+        "zh": "种鱼，一鱼一 Buff",
+        "en": "fish species, one buff each"
+      }
+    },
+    {
+      "value": "9",
+      "label": {
+        "zh": "只海怪 Boss，各有机制",
+        "en": "sea-monster bosses with unique mechanics"
+      }
+    },
+    {
+      "value": "42",
+      "label": {
+        "zh": "道菜，每道都有像素画",
+        "en": "dishes, each with its own pixel art"
+      }
+    },
+    {
+      "value": "0",
+      "label": {
+        "zh": "张图片素材：全部代码绘制",
+        "en": "image files: every sprite is drawn in code"
+      }
+    },
+    {
+      "value": "1",
+      "label": {
+        "zh": "个 HTML 文件，无需构建",
+        "en": "HTML file, no build step"
+      }
+    }
+  ],
+  "features": [
+    {
+      "zh": "一指操作：按住收线、线红松手，挣扎靠鱼线颜色和动作条提示",
+      "en": "One-finger play: hold to reel, release on red, with the line colour and an action bar as cues"
+    },
+    {
+      "zh": "轻肉鸽：每种鱼一个 Buff（放电麻痹、暴击、护盾……），闪光鱼双倍",
+      "en": "Light roguelite: each fish grants a buff (stun zaps, crits, shields…), shinies count double"
+    },
+    {
+      "zh": "九只海怪：河豚鼓刺、乌贼喷墨、幽灵鲨隐身、海龙王三阶段喷发",
+      "en": "Nine bosses: a puffer that spikes, a squid that inks, a ghost shark that vanishes, a three-phase Dragon King"
+    },
+    {
+      "zh": "图鉴、尺寸冠、商店换装：帽子、鱼竿、船和五种猫猫花色",
+      "en": "Fish dex, size crowns, and a wardrobe of hats, rods, boats and five cat coats"
+    },
+    {
+      "zh": "渔喵小馆：斜俯视海边小店，一鱼一菜，猫客人和企鹅、海獭、海豹、章鱼",
+      "en": "The café: an isometric pier shop where every fish is a dish, served to cats, penguins, otters, seals and an octopus"
+    },
+    {
+      "zh": "全部音乐用 WebAudio 实时合成，11 首曲子",
+      "en": "Eleven tracks, all synthesised live with WebAudio"
+    }
+  ],
+  "role": {
+    "zh": "我负责概念、玩法方向、美术指导和试玩反馈，并把真实玩家的意见带回迭代；代码、代码绘制的像素画和音乐由 Claude 按我的指示完成。",
+    "en": "I set the concept, game design direction and art direction, playtested every build and relayed real players' feedback; Claude wrote the code, drew the pixel art in code and composed the music under my direction."
+  },
+  "timeline": [
+    {
+      "date": "2026-09-25",
+      "zh": "调研市面钓鱼游戏，定下竖屏一指操作、一鱼一 Buff、打海怪的方向，做出星露谷风格像素原型",
+      "en": "Surveyed popular fishing games, settled on one-finger vertical play, one buff per fish and sea-monster bosses; first Stardew-style pixel prototype"
+    },
+    {
+      "date": "2026-09-25",
+      "zh": "主角从人改成戴渔夫帽的猫，加入鱼类图鉴，扩到 6 片海域；定名《渔喵传说》，发布到 GitHub Pages",
+      "en": "Swapped the human angler for a cat in a bucket hat, added the fish dex and six seas; named it Fishy Tails and published on GitHub Pages"
+    },
+    {
+      "date": "2026-09-26",
+      "zh": "每片海域的主题音乐、商店换装、尺寸冠、断点续玩；按玩家反馈去掉晃屏、重写开罗风 BGM",
+      "en": "Per-sea music, the wardrobe shop, size crowns and resumable runs; removed screen shake after players felt dizzy and rewrote the soundtrack Kairosoft-style"
+    },
+    {
+      "date": "2026-09-26",
+      "zh": "加入渔喵小馆：一鱼一菜、菜谱图鉴、家具装修、猫客人，改成开罗式斜俯视；全局美术升级（自动明暗、彩色描边）",
+      "en": "Added the café: a dish per fish, a recipe book, furniture and cat guests, then an isometric Kairosoft-style view; global art pass with auto-shading and coloured outlines"
+    },
+    {
+      "date": "2026-09-26",
+      "zh": "新增失落遗迹、星光海、龙宫三片海域，最终 Boss 海龙王",
+      "en": "Three new seas — Lost Ruins, Starlight Sea and the Dragon Palace — ending with the Dragon King"
+    },
+    {
+      "date": "2026-09-27",
+      "zh": "九只海怪全部重画，猫猫加胡子；小馆新手引导、人气等级和动物客人；用自动试玩机器人重新平衡难度",
+      "en": "Redrew all nine bosses and gave the cats whiskers; café onboarding, popularity levels and animal guests; rebalanced difficulty with an auto-play bot"
+    }
+  ],
+  "dev_notes": [
+    {
+      "title": {
+        "zh": "从“人”到“猫”",
+        "en": "From angler to cat"
+      },
+      "body": {
+        "zh": "原型里钓鱼的是个人，我把它换成猫，然后一条条改：尾巴太粗不像猫，要再拟人一点，盘腿坐、戴渔夫帽；坐上船后身子和船分得太开，干脆只画上半身。最后还加了胡子。整张画布只有 180×320，猫二十来个像素宽，每个像素都得算数。",
+        "en": "The prototype's angler was a person; I made it a cat, then iterated: the tail was too thick to read as a cat's, it needed to be more anthropomorphic, cross-legged, in a bucket hat. Once it sat in the boat it floated apart from the hull, so we cut it to the upper body. Whiskers came last. The whole screen is 180×320 and the cat is about twenty pixels wide, so every pixel has a job."
+      }
+    },
+    {
+      "title": {
+        "zh": "为什么开罗更精致？",
+        "en": "Why does Kairosoft look better?"
+      },
+      "body": {
+        "zh": "小馆做完后我问了这个问题。拆开来看：我们是椭圆三角拼形状，明暗只有一两层，统一近黑描边，还混用了两种像素大小。我选了先改画法：全局自动明暗、彩色描边（橙鱼配深橙边），统一小馆像素尺度，再往场景里塞满小道具。",
+        "en": "I asked this after the first café pass. The breakdown: our shapes were stitched from ellipses and triangles, had one or two shades, a uniform near-black outline, and two pixel sizes on one screen. I chose to fix the method first: automatic light-from-top-left shading, coloured outlines (dark orange around an orange fish), one pixel scale in the café, and a lot more props."
+      }
+    },
+    {
+      "title": {
+        "zh": "舒适比刺激重要",
+        "en": "Comfort over punch"
+      },
+      "body": {
+        "zh": "玩家反馈打河豚时晃屏晃到头晕。先改成平滑的小幅摆动，还是有人晕，尤其快断线那一刻。最后干脆去掉挣扎时的晃动和快速闪烁，把“该松手”交给变红的鱼线、底部动作条和手机震动。",
+        "en": "Players told us the puffer fight shook so hard it made them dizzy. We softened the shake into a small smooth sway; some still felt it, especially right before the line snaps. So we removed struggle shake and fast flicker entirely and let the red line, the action bar and phone vibration say “let go”."
+      }
+    },
+    {
+      "title": {
+        "zh": "一条鱼，一道菜",
+        "en": "One fish, one dish"
+      },
+      "body": {
+        "zh": "经营部分借的是潜水员戴夫“钓鱼送寿司店”的概念，不照搬玩法。“订单”一眼看不懂，我就改成直接卖菜：每种鱼一道菜，都有像素画和菜谱图鉴。客人全是猫，分小猫、家猫和穿西装的老虎狮子豹；视角照开罗改成斜俯视的栈桥小店。",
+        "en": "The café borrows Dave the Diver's idea of feeding your catch to a sushi bar, not its mechanics. “Orders” didn't read at a glance, so we just sell dishes: one per fish, each with pixel art and a recipe-book entry. Every guest is a cat — kittens, house cats, and tigers, lions and leopards in suits — in an isometric pier shop modelled on Kairosoft's camera."
+      }
+    },
+    {
+      "title": {
+        "zh": "让机器人先玩",
+        "en": "Let a bot play first"
+      },
+      "body": {
+        "zh": "九片海域做完后，我让 Claude 自己写机器人试玩。四档手速跑完全程，发现难度曲线是反的：Buff 无上限叠加，最终 Boss 七秒就打完；手慢的玩家却会在冰封海湾卡死上百次。修法是 Buff 递减叠加，每次在同一海域继续多送一层护盾。",
+        "en": "With all nine seas in, I had Claude write a bot to play the game. Running at four reaction speeds, it found the curve was upside down: uncapped buff stacking let the final boss fall in seven seconds, while slow players died over a hundred times in the Ice Bay. The fix was diminishing buff stacks plus an extra shield each time you retry a sea."
+      }
+    }
+  ],
+  "palette": [
+    "#1b1b2f",
+    "#0b1020",
+    "#5ed0d6",
+    "#2273a6",
+    "#ff9a76",
+    "#f0d49a",
+    "#f5a04a",
+    "#c8b068",
+    "#ffd23f",
+    "#e8961e",
+    "#ff4d6d",
+    "#6b3d8f",
+    "#c0382a",
+    "#32c0a0",
+    "#5ff2d0",
+    "#8a5a34"
+  ],
+  "shots": [
+    {
+      "file": "shots/01-title.png",
+      "caption": {
+        "zh": "标题画面：阳光浅滩，海底伸出克拉肯的触手",
+        "en": "Title screen over the sunny shallows, with the kraken's tentacles waiting below"
+      }
+    },
+    {
+      "file": "shots/02-coral-reef.png",
+      "caption": {
+        "zh": "彩虹珊瑚礁：狸花猫戴草帽、坐西瓜船，钓狮子鱼",
+        "en": "Rainbow Reef: a tabby in a straw hat reels in a lionfish from a watermelon boat"
+      }
+    },
+    {
+      "file": "shots/03-ice-bay.png",
+      "caption": {
+        "zh": "冰封海湾：浮冰、飘雪，钓独角鲸",
+        "en": "Ice Bay: drifting floes, falling snow and a narwhal on the line"
+      }
+    },
+    {
+      "file": "shots/04-lava-vents.png",
+      "caption": {
+        "zh": "熔岩热泉：三花猫戴海盗帽，钓熔岩鳗",
+        "en": "Lava Vents: a calico pirate hooks a lava eel"
+      }
+    },
+    {
+      "file": "shots/05-starlight-sea.png",
+      "caption": {
+        "zh": "星光海：极光下的黑猫、皇冠和幽灵船",
+        "en": "Starlight Sea: a black cat with a crown and a ghost ship under the aurora"
+      }
+    },
+    {
+      "file": "shots/06-boss-dragon.png",
+      "caption": {
+        "zh": "最终 Boss 海龙王：三段血条，身体随波摆动",
+        "en": "Final boss, the Dragon King: three health phases and a body that ripples with the current"
+      }
+    },
+    {
+      "file": "shots/07-catch.png",
+      "caption": {
+        "zh": "出水卡片：尺寸、大金冠、获得的 Buff 和金币",
+        "en": "Catch card: size, gold crown, the buff you earned and your coins"
+      }
+    },
+    {
+      "file": "shots/08-dex.png",
+      "caption": {
+        "zh": "鱼类图鉴：尺寸范围、捕获次数，集齐一片海域得到小馆摆件",
+        "en": "Fish dex: size ranges and catch counts; completing a sea unlocks a café keepsake"
+      }
+    },
+    {
+      "file": "shots/09-cafe.png",
+      "caption": {
+        "zh": "渔喵小馆营业中：猫客人、企鹅、章鱼和海豹，墙上摆满图鉴奖励",
+        "en": "The café in service: cat guests plus a penguin, an octopus and a seal, with dex trophies on the shelves"
+      }
+    },
+    {
+      "file": "shots/10-recipes.png",
+      "caption": {
+        "zh": "菜谱图鉴：海怪招牌菜用金边盘子",
+        "en": "Recipe book: sea-monster specials come on gold-rimmed plates"
+      }
+    }
+  ],
+  "art": [
+    {
+      "file": "art/fish-sheet.png",
+      "caption": {
+        "zh": "36 种鱼，每行一片海域",
+        "en": "All 36 fish, one sea per row"
+      }
+    },
+    {
+      "file": "art/sea-monsters.png",
+      "caption": {
+        "zh": "九只海怪：4–6 级明暗、鳍条和带高光的眼睛；触手和龙身每帧用代码现画",
+        "en": "The nine sea monsters: 4–6 step ramps, rayed fins and glossy eyes; tentacles and dragon bodies are drawn live each frame"
+      }
+    },
+    {
+      "file": "art/cats.png",
+      "caption": {
+        "zh": "钓鱼猫的五套装扮、厨师猫、猫客人（小猫、家猫、大猫）和四种动物客人",
+        "en": "Five angler outfits, the chef cat, cat guests in three sizes, and four animal guests"
+      }
+    },
+    {
+      "file": "art/dishes.png",
+      "caption": {
+        "zh": "42 道菜，由 14 种造型模板加原料鱼配色生成",
+        "en": "42 dishes built from 14 templates, coloured by the fish that goes into them"
+      }
+    },
+    {
+      "file": "art/nine-seas.png",
+      "caption": {
+        "zh": "九片海域的背景：每片一套天空、海水和海床配色",
+        "en": "Backdrops for the nine seas, each with its own sky, water and seabed palette"
+      }
+    }
+  ],
+  "cabinet": [
+    "shots/01-title.png",
+    "shots/02-coral-reef.png",
+    "shots/04-lava-vents.png",
+    "shots/06-boss-dragon.png",
+    "shots/09-cafe.png"
+  ],
+  "theme": {
+    "c1": "#52dcec",
+    "c2": "#ff8a3d",
+    "c3": "#124f63"
+  },
+  "howto": {
+    "zh": "点一下抛竿，鱼咬钩后按住收线，线变红就松手"
+  }
+}

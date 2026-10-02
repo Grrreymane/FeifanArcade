@@ -1,0 +1,9 @@
+{
+  "friends_only": true,
+  "title": { "zh": "一喵天下", "en": "All Under Paw" },
+  "tagline": { "zh": "战国末年，一只邯郸小商猫押宝秦国质子，一路做到天下之主" },
+  "howto": { "zh": "每季两点精力：经商、结交、办差；点任何一只猫都能聊天送礼，家主老了选崽接班" },
+  "play_url": "https://grrreymane.github.io/AllUnderPaw/",
+  "theme": { "c1": "#e8b04a", "c2": "#c0392b", "c3": "#3a2418" },
+  "cabinet": ["cab/title.png", "cab/family.png"]
+}

@@ -1,0 +1,330 @@
+{
+  "slug": "mouse-cultivation",
+  "title": {
+    "zh": "鼠鼠修仙",
+    "en": "Mouse Immortal"
+  },
+  "tagline": {
+    "zh": "一只鼠鼠的像素修仙之路",
+    "en": "A tiny mouse on the long road to immortality, in pixels"
+  },
+  "genre": {
+    "zh": "像素放置 · 修仙 RPG",
+    "en": "Pixel-art idle RPG · xianxia"
+  },
+  "play_url": "https://grrreymane.github.io/mouse-cultivation-2/",
+  "cover": "cover.png",
+  "summary": {
+    "zh": "挂机放置类修仙小游戏：鼠鼠自动战斗，从炼气期一路修到大乘期，每个大境界都要经历「突破 → 瓶颈 → 渡劫」。v3 回到最初的手绘像素鼠鼠，并用同一套代码像素画法重做了 18 种妖兽、6 只灵兽、2 种坐骑和 6 个境界场景——战斗画面里没有一张图片素材。",
+    "en": "An idle xianxia game where a small mouse fights on autopilot, cultivating from Qi Refining all the way to Mahayana. Every major realm runs on the same rhythm: breakthrough, bottleneck, then a heavenly tribulation. Version 3 brings back the original hand-placed pixel mouse and redraws 18 monsters, 6 spirit beasts, 2 mounts and 6 realm scenes in one consistent code-drawn pixel style, so the battle view uses no image files at all."
+  },
+  "stats": [
+    {
+      "value": "18",
+      "label": {
+        "zh": "种妖兽（6 境界 × 3）",
+        "en": "monsters across 6 realms"
+      }
+    },
+    {
+      "value": "8",
+      "label": {
+        "zh": "只灵兽与坐骑",
+        "en": "spirit beasts & mounts"
+      }
+    },
+    {
+      "value": "40",
+      "label": {
+        "zh": "款天机阁外观（20 武器 + 20 衣服）",
+        "en": "cosmetics (20 weapons, 20 outfits)"
+      }
+    },
+    {
+      "value": "6",
+      "label": {
+        "zh": "个境界场景与专属服装",
+        "en": "realm scenes, each with its own outfit"
+      }
+    },
+    {
+      "value": "0",
+      "label": {
+        "zh": "张角色图片素材，全部代码绘制",
+        "en": "sprite image files: every character is drawn in code"
+      }
+    },
+    {
+      "value": "23",
+      "label": {
+        "zh": "步修行指引任务链",
+        "en": "steps in the guided quest chain"
+      }
+    }
+  ],
+  "features": [
+    {
+      "zh": "六大境界：黄枫谷、乱星海、天南竹海、星宫、灵界、真仙界，各有像素场景",
+      "en": "Six realms, each with its own pixel scene: maple valley, sunset sea, bamboo forest, star palace, floating isles and golden gate"
+    },
+    {
+      "zh": "「突破 → 瓶颈 → 渡劫」节奏：卡关时回去养成，修为圆满后渡劫，三道天雷演出",
+      "en": "Breakthrough, bottleneck, tribulation: gear up when you stall, then survive three lightning strikes to break through"
+    },
+    {
+      "zh": "4 个可手动施放的神通，筑基后可自动施放；每个境界瓶颈有守关妖王",
+      "en": "4 active skills to cast by hand or on auto, plus a gatekeeper boss at every realm bottleneck"
+    },
+    {
+      "zh": "装备、功法、丹药、灵兽、洞府多线养成，大乘后飞升转生三选一天赋",
+      "en": "Gear, techniques, pills, spirit beasts and a cave home to upgrade, plus ascension after Mahayana with a choice of three past-life talents"
+    },
+    {
+      "zh": "离线收益、存档导入导出、手机布局、WebAudio 合成 8-bit 音效",
+      "en": "Offline progress, save import/export, a mobile layout and synthesized 8-bit sound"
+    }
+  ],
+  "role": {
+    "zh": "我是项目发起人和美术总监：v1 是我自己做的；v3 的画风方向、参考设定图、每一轮取舍和关键玩法判断都来自我，代码与代码像素画由 Claude Code 按我的反馈实现。",
+    "en": "I created the game and directed its art, and built v1 myself. For v3 I set the style, supplied the concept references and made every keep-or-cut call and the key gameplay decisions, while Claude Code wrote the code and the code-drawn pixel art from my feedback."
+  },
+  "timeline": [
+    {
+      "date": "2026-04-04",
+      "zh": "v0.1 原型：Canvas 像素鼠鼠、自动战斗、六大境界",
+      "en": "v0.1 prototype: canvas pixel mouse, auto-battle, six realms"
+    },
+    {
+      "date": "2026-04-06",
+      "zh": "v1.0 转生天赋系统；v2.0 美术改回方块像素风",
+      "en": "v1.0 adds rebirth talents, and v2.0 moves the art back to blocky pixels"
+    },
+    {
+      "date": "2026-04-08",
+      "zh": "v2.7 独立仓库，角色改用 AI 生成的精灵图集（由 Codex 协助迭代，之后搁置）",
+      "en": "v2.7: new repo, characters switched to AI-generated sprite sheets (iterated with Codex, then shelved)"
+    },
+    {
+      "date": "2026-09-26",
+      "zh": "v3.0 回归 v1 鼠鼠，像素 DSL 重做全部生物，数值与界面重写",
+      "en": "v3.0: back to the v1 mouse, every creature rebuilt with a pixel DSL, balance and UI rewritten"
+    },
+    {
+      "date": "2026-09-26",
+      "zh": "v3.2 六境界服装、40 款外观重绘、骑乘姿势；v3.3 按设定图重绘灵兽、坐骑与 18 种妖兽",
+      "en": "v3.2: six realm outfits, all 40 cosmetics redrawn, proper riding pose. v3.3: beasts, mounts and all 18 monsters redrawn from concept art"
+    },
+    {
+      "date": "2026-09-27",
+      "zh": "v3.4–v3.7 界面减负、部位强化、装备温养、灵兽护法、守关妖王；封面上线",
+      "en": "v3.4–v3.7: decluttered UI, slot-based enhancement, gear refining, guardian beasts and realm bosses; cover art shipped"
+    }
+  ],
+  "dev_notes": [
+    {
+      "title": {
+        "zh": "为什么 v3 放弃了 AI 精灵图",
+        "en": "Why v3 dropped the AI sprite sheets"
+      },
+      "body": {
+        "zh": "v2 把角色换成了 AI 生成的精灵图集。原图把棋盘格“透明底”直接画进了像素，只能写脚本抠图切帧，后期好几次提交都在修切割错位和白块；画风也比主角精细一档，站在一起会“跳”。v3 全部改回代码绘制，26 种生物共用一套描边和三色阶规则。",
+        "en": "v2 swapped the characters for AI-generated sprite sheets. The checkerboard \"transparency\" was baked into the pixels, so every frame had to be cut out by script, and several late commits went into fixing mis-cut frames and stray white boxes. The sheets were also more detailed than the hero, so the two clashed on screen. v3 draws everything in code, and all 26 creatures share one set of outline and three-tone shading rules."
+      }
+    },
+    {
+      "title": {
+        "zh": "主角：只动身体，不动那张脸",
+        "en": "The hero: new clothes, same face"
+      },
+      "body": {
+        "zh": "为统一画风，先渲染了 A–F 六种鼠鼠方案让我挑：加描边、加明暗、大眼、Q 版重画。我的结论是“还是原版的脸更萌”。于是脸和耳朵完全保留 v1 原稿，只借鉴柔和描边与明暗，袍子收窄，六个境界各设计一套服装，而不只是换色。",
+        "en": "To bring the hero in line with the new monsters, six options (A–F) were rendered side by side: outlines, shading, bigger eyes, a full chibi redraw. My verdict was that the original face was cuter. The v1 face and ears stayed pixel-for-pixel, only the soft outline and shading carried over, the robes were slimmed down, and each realm got its own outfit design instead of a palette swap."
+      }
+    },
+    {
+      "title": {
+        "zh": "把高精度设定图压进 50 像素",
+        "en": "Squeezing concept art into 50 pixels"
+      },
+      "body": {
+        "zh": "我给了一张高精度灵兽设定图。直接放进战斗会比鼠鼠大三四倍，而且只能用图片，所以改为提炼每只的标志特征，在 40–60 像素内重画。先试做蛟龙，通过后才重画全部生物。立式 S 形真龙也试过一版，我觉得不如上一版可爱，当即回滚。",
+        "en": "I supplied a detailed bestiary sheet. Used as-is, each beast would have been three or four times the mouse's size and would have needed image files. Instead each creature was boiled down to its signature features and redrawn at 40–60 px. One dragon went first as a test, and only after I approved it were the rest redrawn. A vertical S-curve dragon was also tried, but I found it less cute and it was reverted on the spot."
+      }
+    },
+    {
+      "title": {
+        "zh": "数值：突破 → 瓶颈 → 渡劫",
+        "en": "Pacing: breakthrough, bottleneck, tribulation"
+      },
+      "body": {
+        "zh": "无头模拟器显示，旧版约 2 小时就到大乘、全程零阵亡，锁妖塔能爬 5000 层。v3 按“参考玩家几刀砍死、能扛几下”反推怪物：刚突破 1.8 刀，瓶颈 4.5 刀，卡住就回去养成。现在 1 倍速到大乘约 3.4 小时。",
+        "en": "A headless simulator showed the old build reached Mahayana in about two hours with zero deaths, and the demon tower could be climbed past 5,000 floors. v3 works monsters out backwards from how many hits a reference player needs to kill them: 1.8 right after a breakthrough and 4.5 at the bottleneck, so a stall sends you back to upgrading. At 1× speed, Mahayana now takes about 3.4 hours."
+      }
+    },
+    {
+      "title": {
+        "zh": "挂机游戏不需要紧张感",
+        "en": "An idle game doesn't need tension"
+      },
+      "body": {
+        "zh": "模拟里积极玩家全程零阵亡，Claude 提议加强战斗紧张感。我否决了：“本就不需要玩家这么动脑，挂机就能变强”，只保留守关妖王。于是妖王是奖励而不是墙：打不过就 90 秒后再来，也不挡渡劫。",
+        "en": "The simulated player never died, so Claude proposed adding combat tension. I said no: players shouldn't have to think that hard, because idling alone should make you stronger. I kept only the realm boss, which became a reward rather than a wall. If you lose, it comes back 90 seconds later, and it never blocks your tribulation."
+      }
+    }
+  ],
+  "palette": [
+    "#181029",
+    "#39294A",
+    "#9CB5D6",
+    "#E7A5C6",
+    "#EFE7F7",
+    "#FFD64A",
+    "#CE9418",
+    "#C68C5A",
+    "#8C5A31",
+    "#D6394A",
+    "#FF5A4A",
+    "#6B39AD",
+    "#2952AD",
+    "#4A8CEF",
+    "#9CD6FF",
+    "#4CC38A"
+  ],
+  "shots": [
+    {
+      "file": "shots/01-early-game.png",
+      "caption": {
+        "zh": "开局：炼气期 · 黄枫谷，修行指引一步步带入各个系统",
+        "en": "Early game in the maple valley, with the quest card guiding you through each system"
+      }
+    },
+    {
+      "file": "shots/02-realm-lianqi.png",
+      "caption": {
+        "zh": "炼气期 · 黄枫谷，赤炎灵猫随行",
+        "en": "Qi Refining: the maple valley, with the fire cat tagging along"
+      }
+    },
+    {
+      "file": "shots/03-realm-zhuji.png",
+      "caption": {
+        "zh": "筑基期 · 乱星海的落日海岸",
+        "en": "Foundation: the sunset coast of the Chaotic Star Sea"
+      }
+    },
+    {
+      "file": "shots/04-realm-jindan.png",
+      "caption": {
+        "zh": "金丹期 · 天南竹海，骑上仙鹤",
+        "en": "Golden Core: the bamboo sea, now riding a crane"
+      }
+    },
+    {
+      "file": "shots/05-realm-yuanying.png",
+      "caption": {
+        "zh": "元婴期 · 星宫，青鳞蛟龙随行",
+        "en": "Nascent Soul: the star palace, with the jade dragon"
+      }
+    },
+    {
+      "file": "shots/06-realm-huashen.png",
+      "caption": {
+        "zh": "化神期 · 灵界浮岛，骑麒麟对阵九尾天狐",
+        "en": "Spirit Severing: the floating isles, riding a qilin against the nine-tailed fox"
+      }
+    },
+    {
+      "file": "shots/07-realm-dacheng.png",
+      "caption": {
+        "zh": "大乘期 · 真仙界，劫雷真龙",
+        "en": "Mahayana: the golden gate and the tribulation dragon"
+      }
+    },
+    {
+      "file": "shots/08-boss-and-skills.png",
+      "caption": {
+        "zh": "瓶颈期守关妖王（王冠、多管血条）、渡劫横条、施放万剑归宗，右侧为灵兽页",
+        "en": "A bottleneck boss with a crown and multi-bar HP, the tribulation prompt, a skill cast and the beasts tab"
+      }
+    },
+    {
+      "file": "shots/09-tribulation.png",
+      "caption": {
+        "zh": "渡劫：乌云压顶，三道天雷中的第一道落下",
+        "en": "Tribulation: storm clouds gather and the first of three lightning strikes lands"
+      }
+    },
+    {
+      "file": "shots/10-cosmetics-shop.png",
+      "caption": {
+        "zh": "天机阁外观收藏：穿龙鳞战甲、持龙牙剑的鼠鼠",
+        "en": "The cosmetics collection, with the mouse in dragon-scale armor holding a dragon-fang sword"
+      }
+    },
+    {
+      "file": "shots/11-mobile.png",
+      "caption": {
+        "zh": "手机布局：资源一行排开，标签页改为 5×2 网格",
+        "en": "Mobile layout: a one-line resource bar and a 5×2 tab grid"
+      }
+    }
+  ],
+  "art": [
+    {
+      "file": "art/monsters.png",
+      "caption": {
+        "zh": "18 种妖兽，每个境界 3 种，全部由 pixelart.js 的像素 DSL 绘制（4× 放大）",
+        "en": "All 18 monsters, three per realm, drawn with the pixelart.js DSL (4× nearest-neighbor)"
+      }
+    },
+    {
+      "file": "art/beasts.png",
+      "caption": {
+        "zh": "6 只灵兽与仙鹤、麒麟两种坐骑，由我的设定图浓缩重画",
+        "en": "The 6 spirit beasts and 2 mounts, condensed from my concept sheet"
+      }
+    },
+    {
+      "file": "art/hero.png",
+      "caption": {
+        "zh": "鼠鼠的六套境界服装：脸和耳朵是 v1 原稿，服装和武器逐境界升级",
+        "en": "The six realm outfits. The face and ears are the untouched v1 sprite, while clothes and weapons level up with each realm"
+      }
+    },
+    {
+      "file": "art/skins.png",
+      "caption": {
+        "zh": "天机阁 20 款衣服与 20 款武器外观",
+        "en": "All 20 outfits and 20 weapons from the cosmetics shop"
+      }
+    },
+    {
+      "file": "art/compare.png",
+      "caption": {
+        "zh": "同样六种妖兽：v2 的 AI 精灵图原稿 vs v3 代码像素重绘",
+        "en": "The same six monsters: v2's raw AI sprite sheet vs v3's code-drawn pixels"
+      }
+    },
+    {
+      "file": "art/realm-scenes.png",
+      "caption": {
+        "zh": "v3.0 时的六境界场景总览（此时生物还是初版，v3.3 起重画）",
+        "en": "The six realm scenes as of v3.0. The creatures here are first-pass versions that were redrawn in v3.3"
+      }
+    }
+  ],
+  "cabinet": [
+    "cab/lianqi.png",
+    "cab/jindan.png",
+    "cab/yuanying.png",
+    "cab/dacheng.png"
+  ],
+  "theme": {
+    "c1": "#f2b134",
+    "c2": "#c0392b",
+    "c3": "#5c2140"
+  },
+  "howto": {
+    "zh": "挂着就会自己打怪修炼，回来点点升级、突破、渡劫"
+  }
+}

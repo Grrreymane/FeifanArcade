@@ -1,0 +1,153 @@
+<!doctype html>
+<!-- Art close-up sheets for 鼠鼠修仙 v3, rendered with the game's own sprites.js / pixelart.js at integer scale.
+     Driven by mouse-cultivation-art.mjs: render(name) draws one sheet at (0,0) and returns its size. -->
+<html><head><meta charset="utf-8"><title>mouse-cultivation art</title>
+<style>html,body{margin:0;background:#0f0d16}canvas{display:block;image-rendering:pixelated}</style></head>
+<body><canvas id="out"></canvas>
+<script src="../../../mouse-cultivation-2/public/sprites.js"></script>
+<script src="../../../mouse-cultivation-2/public/pixelart.js"></script>
+<script>
+const BG = '#0f0d16', PANEL = '#17131f', LINE = '#2a2438', TXT = '#e8e0f0', MUTED = '#9a90b0';
+const FONT = '"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif';
+const REALMS = [['炼气期', '#C8A26B'], ['筑基期', '#E0B84A'], ['金丹期', '#4CC38A'], ['元婴期', '#5B8CFF'], ['化神期', '#B07CFF'], ['大乘期', '#FF6A7A']];
+const MONSTERS = [['灰毛妖鼠', '毒蟾蜍', '赤狐妖'], ['铁甲傀儡', '墨蛟蛇', '暴猿妖'], ['冰魄蜘蛛', '三眼火鸦', '豹形雷兽'],
+  ['鬼影修士', '化龙妖蛟', '血衣魔修'], ['天魔老祖', '九尾天狐', '血魔宗主'], ['劫雷真龙', '混沌古兽', '天道魔神']];
+const BEASTS = [['fire_cat', '赤炎灵猫'], ['ice_wolf', '玄冰狼'], ['thunder_eagle', '雷鸣鹰'], ['shadow_serpent', '暗鳞蛇'], ['jade_dragon', '青鳞蛟龙'], ['phoenix', '天凤']];
+const MOUNTS = [['mount_crane', '仙鹤 · 金丹期坐骑'], ['mount_qilin', '麒麟 · 化神期坐骑']];
+const OUTFITS = ['粗布短褐', '青衫道袍', '青云法袍', '星纹华服', '紫霞仙衣', '九天神衣'];
+const ARMOR = [['as_patched', '补丁布衣'], ['as_farmer', '农夫麻衣'], ['as_scholar', '书生白袍'], ['as_bamboo', '竹纹道袍'], ['as_cloud', '云纹法袍'],
+  ['as_fire_robe', '赤焰袍'], ['as_ice_silk', '冰蚕丝甲'], ['as_night', '夜行衣'], ['as_dragon_scale', '龙鳞战甲'], ['as_flower', '百花锦袍'],
+  ['as_star_robe', '星辰法袍'], ['as_blood_armor', '血战铠甲'], ['as_jade_emperor', '玉帝仙袍'], ['as_ghost', '幽冥鬼衣'], ['as_thunder_armor', '雷霆战甲'],
+  ['as_phoenix_robe', '凤凰涅槃袍'], ['as_void_cloak', '虚空披风'], ['as_celestial', '天神金甲'], ['as_primordial_robe', '鸿蒙道袍'], ['as_universe', '万象天衣']];
+const WEAPONS = [['ws_bamboo', '翠竹剑'], ['ws_rusty', '锈铁剑'], ['ws_bone', '白骨剑'], ['ws_jade', '碧玉剑'], ['ws_flame', '烈焰刀'], ['ws_frost', '寒霜剑'], ['ws_wind', '疾风匕'],
+  ['ws_thunder', '雷霆锤'], ['ws_blood', '嗜血刃'], ['ws_shadow', '暗影匕首'], ['ws_starfall', '星陨剑'], ['ws_dragon', '龙牙剑'], ['ws_phoenix', '凤翎刃'], ['ws_void', '虚空裂隙'],
+  ['ws_moonlight', '月华剑'], ['ws_golden_lotus', '金莲法杖'], ['ws_chaos', '混沌之刃'], ['ws_heavenly', '天罚雷剑'], ['ws_primordial', '太初神剑'], ['ws_cosmic', '寰宇星辰剑']];
+
+const cv = document.getElementById('out');
+let g;
+function begin(w, h) { cv.width = w; cv.height = h; g = cv.getContext('2d'); g.imageSmoothingEnabled = false; g.fillStyle = BG; g.fillRect(0, 0, w, h); }
+function text(s, x, y, size, color, align = 'center', weight = 500) { g.font = `${weight} ${size}px ${FONT}`; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'middle'; g.fillText(s, x, y); }
+function panel(x, y, w, h, tint) { g.fillStyle = PANEL; g.fillRect(x, y, w, h); if (tint) { g.fillStyle = tint; g.globalAlpha = 0.08; g.fillRect(x, y, w, h); g.globalAlpha = 1; } g.strokeStyle = LINE; g.lineWidth = 2; g.strokeRect(x + 1, y + 1, w - 2, h - 2); }
+// Draw a PixelArt creature centred in a box, feet on the box's baseline.
+function creature(name, cx, baseY, K, frame = 0, flip = false) {
+  const sp = PixelArt.getSprite(name); if (!sp) return;
+  const x = Math.round(cx - sp.w * K / 2 + sp.ax * K), y = baseY;
+  PixelArt.draw(g, name, flip ? Math.round(cx + sp.w * K / 2 - sp.ax * K) : x, y, { scale: K, frame, flip });
+}
+
+const SHEETS = {
+  // 18 monsters, one row per realm (scale 4)
+  monsters() {
+    const K = 4, L = 150, CW = 352, RH = [240, 250, 250, 260, 280, 330], W = L + CW * 3 + 20, H = RH.reduce((a, b) => a + b, 0) + 20;
+    begin(W, H);
+    let y0 = 10;
+    MONSTERS.forEach((row, r) => {
+      const CH = RH[r];
+      panel(10, y0 + 4, W - 20, CH - 8, REALMS[r][1]);
+      g.fillStyle = REALMS[r][1]; g.fillRect(10, y0 + 4, 6, CH - 8);
+      text(REALMS[r][0], 10 + L / 2, y0 + CH / 2, 28, REALMS[r][1], 'center', 700);
+      row.forEach((name, c) => {
+        const cx = L + CW * c + CW / 2 + 10;
+        creature(name, cx, y0 + CH - 50, K, 0, true);
+        text(name, cx, y0 + CH - 26, 20, TXT);
+      });
+      y0 += CH;
+    });
+    return [W, H];
+  },
+  // 6 spirit beasts + 2 mounts (scale 5)
+  beasts() {
+    const K = 5, CW = 400, CH = 320, W = CW * 3 + 20, MH = 380, H = CH * 2 + MH + 30;
+    begin(W, H);
+    BEASTS.forEach(([id, nm], i) => {
+      const c = i % 3, r = Math.floor(i / 3);
+      const x0 = 10 + c * CW, y0 = 10 + r * CH;
+      panel(x0 + 4, y0 + 4, CW - 8, CH - 8);
+      creature(id, x0 + CW / 2, y0 + CH - 64, K);
+      text(nm, x0 + CW / 2, y0 + CH - 32, 22, TXT);
+    });
+    const y0 = 10 + CH * 2 + 10;
+    MOUNTS.forEach(([id, nm], i) => {
+      const x0 = 10 + i * (W - 20) / 2, w = (W - 20) / 2;
+      panel(x0 + 4, y0, w - 8, MH, '#FFC83A');
+      creature(id, x0 + w / 2, y0 + MH - 62, 6);
+      text(nm, x0 + w / 2, y0 + MH - 30, 22, TXT);
+    });
+    return [W, H];
+  },
+  // the hero in the six realm outfits, each with its realm's default weapon (scale 8)
+  hero() {
+    const K = 8, CW = 290, CH = 400, W = CW * 6 + 20, H = CH + 20;
+    begin(W, H);
+    OUTFITS.forEach((nm, r) => {
+      const x0 = 10 + r * CW;
+      panel(x0 + 4, 10, CW - 8, CH - 8, REALMS[r][1]);
+      g.save(); g.beginPath(); g.rect(x0 + 6, 12, CW - 12, CH - 12); g.clip();
+      Sprites.drawMouseByRealm(g, x0 + CW / 2 - 12, 10 + CH - 168, K, r, 0, 0, {});
+      g.restore();
+      text(REALMS[r][0], x0 + CW / 2, 10 + CH - 60, 24, REALMS[r][1], 'center', 700);
+      text(nm, x0 + CW / 2, 10 + CH - 30, 20, TXT);
+    });
+    return [W, H];
+  },
+  // 20 gacha outfits worn over the 金丹 silhouette + 20 gacha weapons
+  skins() {
+    const K = 5, CW = 170, CH = 225, W = CW * 10 + 20, WH = 190, H = CH * 2 + WH * 2 + 40;
+    begin(W, H);
+    ARMOR.forEach(([id, nm], i) => {
+      const c = i % 10, r = Math.floor(i / 10), x0 = 10 + c * CW, y0 = 10 + r * CH;
+      panel(x0 + 3, y0 + 3, CW - 6, CH - 6);
+      g.save(); g.beginPath(); g.rect(x0 + 5, y0 + 5, CW - 10, CH - 10); g.clip();
+      Sprites.drawMouseByRealm(g, x0 + CW / 2 - 8, y0 + CH - 105, K, 2, 0, 0, { equippedArmorSkin: id });
+      g.restore();
+      text(nm, x0 + CW / 2, y0 + CH - 24, 18, TXT);
+    });
+    const yw = 10 + CH * 2 + 20;
+    WEAPONS.forEach(([id, nm], i) => {
+      const c = i % 10, r = Math.floor(i / 10), x0 = 10 + c * CW, y0 = yw + r * WH;
+      panel(x0 + 3, y0 + 3, CW - 6, WH - 6);
+      const sp = Sprites.getWeaponSprite(id), s = 5;
+      if (sp) g.drawImage(sp, Math.round(x0 + CW / 2 - sp.width * s / 2), y0 + 14, sp.width * s, sp.height * s);
+      text(nm, x0 + CW / 2, y0 + WH - 22, 18, TXT);
+    });
+    return [W, H];
+  },
+  // v2 (AI-generated sprite sheet) vs v3 (pixel DSL), same six monsters
+  async compare() {
+    const img = new Image(); img.src = '../../../mouse-cultivation-2/art/monsters_sheet_1_01.png';
+    await img.decode();
+    const names = ['灰毛妖鼠', '毒蟾蜍', '赤狐妖', '铁甲傀儡', '墨蛟蛇', '暴猿妖'];
+    const CW = 250, CH = 230, L = 10, W = CW * 6 + 20, H = CH * 2 + 90;
+    begin(W, H);
+    text('v2 · AI 生成精灵图（原始图集：棋盘格“透明底”是画进去的像素，需脚本抠图切帧）', 20, 30, 22, MUTED, 'left');
+    text('v3 · 像素 DSL 代码重绘（描边 + 三色阶明暗，4× 最近邻放大）', 20, 60 + CH + 16, 22, MUTED, 'left');
+    const cw = img.width / 4, ch = img.height / 6;
+    names.forEach((nm, i) => {
+      const x0 = L + i * CW;
+      panel(x0 + 4, 50, CW - 8, CH - 8);
+      const s = Math.min((CW - 24) / cw, (CH - 24) / ch);
+      g.imageSmoothingEnabled = true; g.imageSmoothingQuality = 'high';
+      g.drawImage(img, 0, i * ch, cw, ch, x0 + CW / 2 - cw * s / 2, 50 + (CH - 8) / 2 - ch * s / 2, cw * s, ch * s);
+      g.imageSmoothingEnabled = false;
+      panel(x0 + 4, 50 + CH + 40, CW - 8, CH - 8);
+      creature(nm, x0 + CW / 2, 50 + CH + 40 + CH - 50, 4, 0, true);
+      text(nm, x0 + CW / 2, 50 + CH + 40 + CH - 28, 18, TXT);
+    });
+    return [W, H];
+  },
+};
+window.render = async name => { const r = await SHEETS[name](); cv.style.width = r[0] + 'px'; return r; };
+
+// Main palette: most frequent opaque colours across the hero, monsters and beasts (quantised to 4 bits/channel).
+window.palette = () => {
+  const counts = new Map();
+  const add = (c, w, h) => { const d = c.getContext('2d').getImageData(0, 0, w, h).data;
+    for (let i = 0; i < d.length; i += 4) { if (d[i + 3] < 250) continue; const k = ((d[i] >> 3) << 10) | ((d[i + 1] >> 3) << 5) | (d[i + 2] >> 3); counts.set(k, (counts.get(k) || 0) + 1); } };
+  const names = [...MONSTERS.flat(), ...BEASTS.map(b => b[0]), ...MOUNTS.map(m => m[0])];
+  for (const n of names) { const c = document.createElement('canvas'), sp = PixelArt.getSprite(n); c.width = sp.w; c.height = sp.h; PixelArt.draw(c.getContext('2d'), n, sp.ax, sp.ay, { scale: 1 }); add(c, sp.w, sp.h); }
+  for (let r = 0; r < 6; r++) { const c = document.createElement('canvas'); c.width = 48; c.height = 48; Sprites.drawMouseByRealm(c.getContext('2d'), 20, 36, 1, r, 0, 0, {}); for (let k = 0; k < 3; k++) add(c, 48, 48); }
+  const hex = k => '#' + [(k >> 10) & 31, (k >> 5) & 31, k & 31].map(v => ((v << 3) | (v >> 2)).toString(16).padStart(2, '0')).join('').toUpperCase();
+  return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 60).map(([k, n]) => hex(k) + ':' + n).join(' ');
+};
+</script>
+</body></html>

@@ -1,0 +1,10 @@
+{
+  "friends_only": true,
+  "title": { "zh": "光速逃亡", "en": "Lightspeed Escape" },
+  "tagline": { "zh": "带着情报穿越五个星区，甩开身后的叛军舰队" },
+  "howto": { "zh": "点地图跃迁，战斗里点武器、拖动瞄准敌舰舱室，随时能暂停" },
+  "tip": { "zh": "一局 20–30 分钟 · 竖屏单手就能玩" },
+  "play_url": "https://1gp-studio.github.io/LightspeedEscape/",
+  "theme": { "c1": "#ffb547", "c2": "#52dcec", "c3": "#15213f" },
+  "cabinet": ["cab/screenshot-title.png", "cab/screenshot-combat.png", "cab/screenshot-map.png"]
+}

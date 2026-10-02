@@ -1,0 +1,46 @@
+/* Friends-and-family edition: just the arcade floor, mobile first. */
+.friends .brand { cursor: default; }
+.coins { font-family: var(--pixel); font-size: 10px; color: var(--coin); animation: blink2 1.4s steps(1) infinite; }
+
+.friends .hero { padding-bottom: 20px; }
+.friends .hero-intro { color: var(--ink); }
+
+.friends .cab-front { gap: 12px; }
+.friends .cab-front .btn { width: 100%; font-size: 16px; padding-block: 13px 15px; }
+.howto { margin: 0; font-size: 13px; line-height: 1.55; color: #e4ddf5; background: rgba(0, 0, 0, .22); padding: 8px 10px; }
+.howto b { display: inline-block; margin-right: 8px; padding: 0 6px; background: var(--c1); color: #0b0716; font-size: 12px; }
+
+/* save-file "LED" readout */
+.led {
+  font-family: var(--body); font-size: 13px; line-height: 1.45; color: #7d6fa3;
+  background: #0b0716; border: 3px solid #2a2140; padding: 8px 10px 9px; min-height: 3.6em;
+}
+.led span { display: block; font-family: var(--pixel); font-size: 8px; letter-spacing: 1px; color: #4f4373; margin-bottom: 4px; }
+.led.has { color: var(--coin); }
+.led.has span { color: var(--c1); font-family: var(--body); font-size: 11px; font-weight: 700; letter-spacing: 2px; }
+
+@media (max-width: 980px) {
+  .friends .cabinets {
+    grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: minmax(0, 340px);
+    justify-content: center; overflow: visible; margin: 0; padding: 0; gap: 56px;
+  }
+  .friends .cab-panel { width: 108%; margin-left: -4%; }
+}
+@media (max-width: 640px) {
+  .friends .brand-en { display: none; }
+}
+
+.cab-marquee .t.long { font-size: 24px; }
+.led.tip { color: #e4ddf5; }
+
+/* landscape games (visual novel) get a widescreen window instead of the phone */
+#player.wide .phone {
+  height: auto; width: min(92vw, calc((86vh - 70px) * 1.6)); aspect-ratio: 16 / 10;
+  border-radius: 14px; padding: 8px;
+}
+#player.wide .phone iframe { border-radius: 8px; }
+
+@media (min-width: 981px) {
+  .friends .cabinets { display: flex; flex-wrap: wrap; justify-content: center; gap: 60px 40px; }
+  .friends .cab { width: calc((100% - 80px) / 3); }
+}

@@ -1,0 +1,329 @@
+{
+  "slug": "rebirthday",
+  "title": {
+    "zh": "人生重开物语",
+    "en": "Rebirthday"
+  },
+  "tagline": {
+    "zh": "抽三个天赋，分二十点属性，一年一年过完这一生。这辈子不行？那就重开。",
+    "en": "Roll three talents, spend twenty points, and live a whole life one year at a time. Didn't work out? Start over."
+  },
+  "genre": {
+    "zh": "竖屏像素风人生模拟",
+    "en": "Pixel-art life simulator (portrait)"
+  },
+  "play_url": "https://grrreymane.github.io/Rebirthday/",
+  "cover": "cover.png",
+  "summary": {
+    "zh": "致敬经典网页游戏《人生重开模拟器》，但给每一年都配上了画面：主角在像素场景里从婴儿长到白发，穿上校服、婚纱、官袍或道袍，家人和猫狗一起出现、一起变老。开局先开命运胶囊、再自选天赋和属性，途中面对人生抉择，还可能误入修仙、异世界、穿越古代、丧尸末日、赛博朋克或海盗等隐藏路线。",
+    "en": "A take on the cult browser game Life Restart Simulator, with art for every year of the run. Your character grows from a newborn to a white-haired elder across pixel scenes, changing into school uniforms, wedding clothes, official robes or cultivator's silks, with family and pets growing old alongside. You open a fate capsule, pick talents and stats, make the big calls when life forces one, and may stumble into hidden routes: cultivation, another world, ancient China, a zombie apocalypse, a cyberpunk city or life on a pirate ship."
+  },
+  "stats": [
+    {
+      "value": "810",
+      "label": {
+        "zh": "条人生事件",
+        "en": "life events"
+      }
+    },
+    {
+      "value": "67",
+      "label": {
+        "zh": "个天赋（含 10 个诅咒）",
+        "en": "talents, 10 of them curses"
+      }
+    },
+    {
+      "value": "57",
+      "label": {
+        "zh": "个成就",
+        "en": "achievements"
+      }
+    },
+    {
+      "value": "37",
+      "label": {
+        "zh": "个像素场景",
+        "en": "pixel scenes"
+      }
+    },
+    {
+      "value": "43",
+      "label": {
+        "zh": "套服装造型",
+        "en": "outfits"
+      }
+    },
+    {
+      "value": "6",
+      "label": {
+        "zh": "条隐藏路线",
+        "en": "hidden routes"
+      }
+    }
+  ],
+  "features": [
+    {
+      "zh": "命运胶囊：一个天赋由系统开出且不可更改，可能是传说，也可能是诅咒",
+      "en": "Fate capsule: one talent is drawn for you and locked in. It might be legendary or it might be a curse"
+    },
+    {
+      "zh": "角色会长大变老：从襁褓到拄拐，换校服、职业装、礼服和各路线服装",
+      "en": "Characters visibly age, from swaddled baby to walking cane, and change into school, work, wedding and route outfits"
+    },
+    {
+      "zh": "关键节点二选一：复读还是打工、出不出道、渡劫还是再闭关",
+      "en": "Two-way life choices: retake the exam or get a job, debut or say no, face the tribulation or meditate another century"
+    },
+    {
+      "zh": "六条隐藏路线，各有专属场景、服装、音乐和结局",
+      "en": "Six hidden routes, each with its own scenes, costumes, music and endings"
+    },
+    {
+      "zh": "轮回殿永久升级，上一世的猫、伴侣和墓碑会以「前世因果」回到新人生",
+      "en": "Permanent upgrades in the Hall of Reincarnation; last life's cat, partner and gravestone can turn up again in the next"
+    },
+    {
+      "zh": "结局按属性打出 D 到 SSS，附墓志铭和带二维码的分享卡",
+      "en": "Endings graded D to SSS, with an epitaph and a share card that carries a QR code"
+    }
+  ],
+  "role": {
+    "zh": "我负责创意、美术方向、玩法设计决策和试玩反馈；代码、像素美术和剧情文本由 Claude 按我的方向生成。",
+    "en": "I set the concept, art direction and key design calls, and playtested every build; Claude generated the code, pixel art and story text under my direction."
+  },
+  "timeline": [
+    {
+      "date": "2026-09-26",
+      "zh": "提出创意：做一个「加上美术」的人生重开模拟器，沿用渔喵传说的 8bit 竖屏开罗风。首版上线：317 条事件、23 个场景，定名 Rebirthday，发布到 GitHub Pages",
+      "en": "Pitched the idea: Life Restart Simulator, but with art, in the same 8-bit portrait Kairosoft style as FishyTails. First build shipped with 317 events and 23 scenes, was named Rebirthday and went live on GitHub Pages"
+    },
+    {
+      "date": "2026-09-26",
+      "zh": "首轮试玩反馈后：女性角色不再秃头和啤酒肚，修仙放慢并分出正道、魔修、妖修三支，新增命运胶囊、轮回殿、前世因果、人生抉择、轮回簿、分享卡和四条隐藏路线",
+      "en": "After the first playtest: no baldness or beer bellies for women, slower cultivation split into orthodox, demonic and beast paths, plus the fate capsule, Hall of Reincarnation, past-life karma, life choices, the book of lives, a share card and four more hidden routes"
+    },
+    {
+      "date": "2026-09-27",
+      "zh": "修复偶发的深蓝空白屏（首帧时间差为负导致的时序 bug）；去掉出生年份避免穿帮，新增九尾狐原形美术与转折点高亮",
+      "en": "Fixed an intermittent blank blue screen, a timing bug where the first frame's time delta could go negative. Dropped birth years to avoid contradictions, added nine-tailed fox art and highlighted turning points"
+    },
+    {
+      "date": "2026-09-27",
+      "zh": "场景与角色扩充：五档家境住宅（农家土坯房、出租屋、三套普通户型、豪宅、庄园）、新发型与便装、人生长街标题页、古代街市和异世界城镇",
+      "en": "More art: five tiers of homes (village farmhouse, rented room, three ordinary flats, mansion, estate), new hairstyles and casual clothes, a life-stage title street, an ancient market street and a fantasy town"
+    },
+    {
+      "date": "2026-09-27",
+      "zh": "两轮模拟人生逻辑审查，修掉约 220 处剧情、场景和立绘矛盾；按我的要求把每条事件压到三行以内",
+      "en": "Two rounds of logic audits on simulated lives fixed about 220 story, scene and sprite contradictions; at my request every event was cut to three lines or fewer"
+    },
+    {
+      "date": "2026-09-27",
+      "zh": "结婚年龄提前、贫穷真正影响寿命、赛博线加入铺垫，并以不刻意的方式加入同性恋情",
+      "en": "Earlier marriages, poverty that really shortens life, a build-up into the cyber route, and same-sex love told like any other story"
+    }
+  ],
+  "dev_notes": [
+    {
+      "title": {
+        "zh": "风格定调：沿用渔喵传说",
+        "en": "Setting the look: borrowing from FishyTails"
+      },
+      "body": {
+        "zh": "我一开始就定了方向：沿用我之前渔喵传说的 8bit 竖屏开罗风。游戏是 180×320 的像素画布，没有一张图片素材：每个人物都是 20×34 的参数化小人，按年龄、发型、服装、眼镜、拐杖拼出来，场景也全用代码绘制。",
+        "en": "I set the direction on day one: reuse the 8-bit portrait Kairosoft style of my earlier game FishyTails. The game runs on a 180×320 pixel canvas with no image assets. Every person is a 20×34 sprite assembled from parameters (age, hairstyle, outfit, glasses, walking cane) and every scene is drawn in code."
+      }
+    },
+    {
+      "title": {
+        "zh": "试玩驱动的角色与场景调整",
+        "en": "Playtesting shaped the characters and scenes"
+      },
+      "body": {
+        "zh": "试玩后我发现，秃头和啤酒肚用在女生身上不合适，改为按性别给出不同的衰老表现；我觉得场景单调、富豪家也该不一样，于是家分成五档，从农家土坯房到带喷泉花园的庄园，还加了新发型和便装；标题页也因为我觉得粗糙，重画成一条人生长街。",
+        "en": "After playing, I flagged that baldness and a beer belly looked wrong on women, so aging now differs by gender. I found the scenes monotonous and said a rich family's home should look rich, so homes split into five tiers, from a mud-brick farmhouse to an estate with a fountain garden, with new hairstyles and casual outfits. I also called the title screen rough, and it became a street that walks through every stage of life."
+      }
+    },
+    {
+      "title": {
+        "zh": "文字说什么，画面就是什么",
+        "en": "If the text says it, the picture shows it"
+      },
+      "body": {
+        "zh": "我反复抓到文字和立绘对不上：妖族化回原形人却没变狐狸、道侣飞升了还站在画面里。于是定下规则：文字出现「原形」就画九尾狐，离开故事的人也离开画面，隐藏路线不用现代场景。之后两轮模拟人生审查又修掉约 220 处矛盾。",
+        "en": "I kept catching mismatches between text and sprites: a fox spirit \"returning to true form\" while still drawn as a human, a partner who had ascended still standing on stage. The fixes became rules: any year whose text mentions the true form draws the fox, anyone who leaves the story leaves the stage, and hidden routes never use modern scenes. Two audit rounds over simulated lives then caught about 220 more contradictions."
+      }
+    },
+    {
+      "title": {
+        "zh": "命运胶囊：把一个天赋交给系统",
+        "en": "The fate capsule: handing one talent to fate"
+      },
+      "body": {
+        "zh": "原版是三个天赋全自选。我提出让系统随机定一个、玩家改不了，最后做成「一个天命＋两个自选」：扭蛋机先吐出一颗命运胶囊，四成概率开出诅咒，开到诅咒补偿 3 点属性。我又追问转世还能有什么好处，于是有了轮回殿永久升级和「前世因果」。",
+        "en": "In the original game you pick all three talents. I suggested letting the system roll one that the player can't change. It became one fate talent plus two of your choice: the machine drops a fate capsule first, 40% of them hold a curse, and a curse pays back 3 extra stat points. When I asked what else reincarnation should give, that led to the Hall of Reincarnation upgrades and past-life karma."
+      }
+    },
+    {
+      "title": {
+        "zh": "写得少一点，才不像 AI",
+        "en": "Less writing, less AI flavour"
+      },
+      "body": {
+        "zh": "我发现有些事件写得太满，比如海盗线红胡子的故事显得油腻，于是定下规则：每条事件不超过三行，只写发生了什么，细节一多「AI 味」就重。约 120 条长事件因此重写。加入同性恋情时也按我「不要太刻意」的想法，当作普通爱情来写。",
+        "en": "I found some events overwritten; a pirate captain's farewell read as greasy. I set a rule: no event longer than three lines, just say what happened, because piling on detail is what makes text read as AI-written. About 120 long events were rewritten. When same-sex love was added, it followed my note to not make a big deal of it: it plays out like any other love story."
+      }
+    }
+  ],
+  "palette": [
+    "#140c2a",
+    "#1b1b2f",
+    "#ffdcb8",
+    "#ff9fae",
+    "#f6e3b4",
+    "#8a5a34",
+    "#ffe14a",
+    "#ffd23f",
+    "#e8343a",
+    "#ff7eb6",
+    "#b77bff",
+    "#4a90d9",
+    "#46a2ea",
+    "#3fb8b0",
+    "#5fb85a",
+    "#6ac05a"
+  ],
+  "shots": [
+    {
+      "file": "shots/01-title.png",
+      "caption": {
+        "zh": "标题页：一个人沿着人生长街走过医院、学校、写字楼、家和公园，年龄随步数增长",
+        "en": "Title screen: a character walks the street of life past hospital, school, office, home and park, aging with every step"
+      }
+    },
+    {
+      "file": "shots/02-gacha.png",
+      "caption": {
+        "zh": "天赋扭蛋：先开出一颗不可更改的命运胶囊",
+        "en": "Talent gacha: the machine drops a fate capsule you can't trade away"
+      }
+    },
+    {
+      "file": "shots/03-alloc.png",
+      "caption": {
+        "zh": "分配属性：家境决定出生时的摇篮，从纸箱、木床到带帐子的白床和金摇篮",
+        "en": "Stat allocation: family wealth decides your cradle, from a cardboard box up to a canopied crib or a golden one"
+      }
+    },
+    {
+      "file": "shots/04-village.png",
+      "caption": {
+        "zh": "山村出生，八岁的小学生和爸妈、小狗住在农家土坯房里",
+        "en": "Born in a village: an eight-year-old with parents and dog in a mud-brick farmhouse"
+      }
+    },
+    {
+      "file": "shots/05-choice.png",
+      "caption": {
+        "zh": "人生抉择：高考落榜，复读还是去社会上闯一闯",
+        "en": "A life choice: failed the college entrance exam, retake it or head out into the world"
+      }
+    },
+    {
+      "file": "shots/06-wedding.png",
+      "caption": {
+        "zh": "喜结连理：红色囍字礼堂里的婚礼",
+        "en": "Wedding day in a red double-happiness hall"
+      }
+    },
+    {
+      "file": "shots/07-cultivation.png",
+      "caption": {
+        "zh": "妖修路线：月夜的万妖山，主角第一次化回九尾狐原形",
+        "en": "Beast cultivation route: on moonlit Myriad Demon Mountain the hero takes fox form for the first time"
+      }
+    },
+    {
+      "file": "shots/08-isekai.png",
+      "caption": {
+        "zh": "被卡车撞进异世界：勇者和精灵公主在城镇广场",
+        "en": "Hit by a truck and reborn in another world: a hero and an elf princess in the town square"
+      }
+    },
+    {
+      "file": "shots/09-cyberpunk.png",
+      "caption": {
+        "zh": "赛博朋克路线：酸雨中的霓虹夜城和一只机械猫",
+        "en": "Cyberpunk route: a neon city in acid rain, with a robot cat"
+      }
+    },
+    {
+      "file": "shots/10-summary.png",
+      "caption": {
+        "zh": "人生总结：墓碑、墓志铭、各项评价和总评",
+        "en": "Life summary: gravestone, epitaph, stat ratings and the final grade"
+      }
+    },
+    {
+      "file": "shots/11-share-card.png",
+      "caption": {
+        "zh": "分享卡：720×1280 像素图，附人生高光和扫码试玩的二维码",
+        "en": "Share card: a 720×1280 pixel image with life highlights and a QR code to play"
+      }
+    },
+    {
+      "file": "shots/12-reincarnation-hall.png",
+      "caption": {
+        "zh": "轮回殿：用每一世赚到的轮回点换永久升级",
+        "en": "Hall of Reincarnation: spend points earned each life on permanent upgrades"
+      }
+    }
+  ],
+  "art": [
+    {
+      "file": "art/aging.png",
+      "caption": {
+        "zh": "同一个参数化小人从 0 岁到 85 岁：襁褓、背带裤、红领巾、校服、礼服、西装与秃顶、拄拐，最后变成带光环的小天使",
+        "en": "One parametric sprite from birth to 85: swaddling, overalls, red scarf, school uniform, wedding clothes, suit and bald spot, walking cane, then a haloed angel"
+      }
+    },
+    {
+      "file": "art/outfits.png",
+      "caption": {
+        "zh": "30 套职业、婚礼和隐藏路线服装，全部在同一个 20×34 人物模板上用代码绘制",
+        "en": "30 job, wedding and hidden-route outfits, all painted in code on the same 20×34 character template"
+      }
+    },
+    {
+      "file": "art/scenes.png",
+      "caption": {
+        "zh": "20 个像素场景：从医院、农家小院、豪宅到血煞宗、魔王城、霓虹夜城和月球",
+        "en": "20 of the pixel scenes, from hospital, farmhouse and mansion to a blood-moon sect, a demon lord's throne room, a neon city and the Moon"
+      }
+    },
+    {
+      "file": "art/family-pets.png",
+      "caption": {
+        "zh": "家人、精灵伴侣、猫狗，以及妖族血脉的狐狸原形",
+        "en": "Family, an elf partner, cats and dogs, and the fox true form of the beast bloodline"
+      }
+    }
+  ],
+  "cabinet": [
+    "shots/01-title.png",
+    "shots/04-village.png",
+    "shots/07-cultivation.png",
+    "shots/08-isekai.png",
+    "shots/09-cyberpunk.png",
+    "shots/06-wedding.png"
+  ],
+  "theme": {
+    "c1": "#ffd23f",
+    "c2": "#e8413c",
+    "c3": "#2c5aa0"
+  },
+  "howto": {
+    "zh": "抽天赋、分属性，然后点屏幕一年一年过完这一生"
+  }
+}

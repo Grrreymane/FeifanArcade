@@ -1,0 +1,10 @@
+{
+  "friends_only": true,
+  "title": { "zh": "我被Agent包围了", "en": "Drained by Me" },
+  "tagline": { "zh": "四个夜晚、四个 AI 室友，和一只饿着肚子的触手怪" },
+  "howto": { "zh": "每晚选一个室友聊天，再决定吸多少 Token；四晚之后看结局" },
+  "play_url": "https://grrreymane.github.io/DrainedByMe/",
+  "frame": "wide",
+  "theme": { "c1": "#f0a8b0", "c2": "#9b4d45", "c3": "#4a2a30" },
+  "cabinet": ["cab/claude.webp", "cab/codex.webp", "cab/cursor.webp", "cab/workbuddy.webp"]
+}
