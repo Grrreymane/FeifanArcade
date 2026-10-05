@@ -349,7 +349,8 @@ window.GAMES = [
   },
   "howto": {
    "zh": "点一下抛竿，鱼咬钩后按住收线，线变红就松手"
-  }
+  },
+  "video": "trailer.mp4"
  },
  {
   "slug": "rebirthday",

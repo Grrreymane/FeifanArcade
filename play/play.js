@@ -59,6 +59,7 @@
       <div class="cab-body">
         <div class="cab-screen" tabindex="0" role="button" data-play="${g.slug}" aria-label="开玩 ${esc(g.title.zh)}">
           ${imgs}
+          ${g.video ? `<video class="pv" src="${src(g, g.video)}" muted playsinline loop preload="none" aria-hidden="true"></video>` : ''}
           <div class="play-overlay">点击<br>开始游戏</div>
         </div>
       </div>
@@ -88,6 +89,27 @@
     $('#coins').textContent = `CREDIT ${played}`;
     document.querySelectorAll('.bulbs').forEach(b => { b.innerHTML = '<i></i>'.repeat(14); });
     slideshows();
+    watchVideos();
+  }
+
+  // Video previews: whichever cabinet screen is most in view plays its trailer, the rest pause.
+  let io;
+  function watchVideos() {
+    io?.disconnect();
+    const vids = [...document.querySelectorAll('.cab-screen video')];
+    if (!vids.length || !('IntersectionObserver' in window)) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const ratio = new Map();
+    const update = () => {
+      let best = null, bestR = 0.55;
+      for (const v of vids) { const r = ratio.get(v) || 0; if (r > bestR) { best = v; bestR = r; } }
+      for (const v of vids) {
+        if (v === best) { v.play().then(() => v.classList.add('on')).catch(() => {}); }
+        else if (!v.paused) { v.pause(); v.classList.remove('on'); }
+      }
+    };
+    io = new IntersectionObserver(es => { es.forEach(e => ratio.set(e.target, e.intersectionRatio)); update(); }, { threshold: [0, .25, .55, .75, 1] });
+    vids.forEach(v => io.observe(v));
   }
 
   let timers = [];

@@ -44,3 +44,7 @@
   .friends .cabinets { display: flex; flex-wrap: wrap; justify-content: center; gap: 60px 40px; }
   .friends .cab { width: calc((100% - 80px) / 3); }
 }
+
+/* trailer preview on the cabinet screen */
+.cab-screen video.pv { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .4s; background: #000; }
+.cab-screen video.pv.on { opacity: 1; }
