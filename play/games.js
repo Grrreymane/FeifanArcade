@@ -106,6 +106,33 @@ window.GAMES = [
   ]
  },
  {
+  "slug": "overtime-master",
+  "title": {
+   "zh": "今天也加班",
+   "en": "Overtime Master"
+  },
+  "tagline": {
+   "zh": "领导催，同事坑，项目还得你来扛。三十天交满 2600 点，还要准点下班"
+  },
+  "howto": {
+   "zh": "点工作做草稿，点提交才算进度；压力高了就休息，19:00 起能下班"
+  },
+  "tip": {
+   "zh": "18 位奇葩领导，每周一随机换 3 位"
+  },
+  "play_url": "https://grrreymane.github.io/OvertimeMaster/",
+  "theme": {
+   "c1": "#8ee0c0",
+   "c2": "#e8603c",
+   "c3": "#1f4a3e"
+  },
+  "cabinet": [
+   "cab/title.png",
+   "cab/bosses.png",
+   "cab/day.png"
+  ]
+ },
+ {
   "slug": "lightspeed-escape",
   "title": {
    "zh": "光速逃亡",
