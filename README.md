@@ -39,3 +39,11 @@ node --experimental-websocket tools/shoot.mjs tools/recipes/rebirthday-shots.mjs
 `play/` 是给亲友的轻松版入口（`/FeifanArcade/play/`）：不需要密码，只有街机厅，没有求职内容，不被搜索引擎收录。光速逃亡和我被Agent包围了只在亲友版里。
 机子上的"你的存档"彩蛋读取的是访客自己浏览器里的游戏存档（`sea-monster-*`、`rl-meta`、`mouse_cultivation_save_v4`），
 这要求网站和游戏在同一个域名下；以后换自定义域名时，这个彩蛋会读不到存档。
+
+## 游戏名字体
+
+游戏名用 Fusion Pixel 12px（OFL 授权，见 `fonts/OFL-fusion-pixel.txt`），只截取了标题用到的字。新增或改名游戏后运行：
+
+```bash
+sh tools/subset-title-font.sh
+```

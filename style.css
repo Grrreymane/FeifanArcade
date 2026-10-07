@@ -351,3 +351,25 @@ body.gated > :not(.gate) { visibility: hidden; }
 .gate-err { min-height: 1.4em; margin: 0; font-size: 13px; color: var(--hot); }
 .gate-box.shake { animation: shake .35s; }
 @keyframes shake { 20%, 60% { transform: translateX(-8px); } 40%, 80% { transform: translateX(8px); } }
+
+/* ---------- game titles: Fusion Pixel 12px (OFL, subset to title glyphs — re-subset when adding a game) ---------- */
+@font-face {
+  font-family: "Fusion Pixel Title";
+  src: url("fonts/fusion-pixel-title.woff2") format("woff2");
+  font-display: swap;
+}
+:root { --title: "Fusion Pixel Title", var(--zh-display); }
+.cab-marquee .t, html[lang="en"] .cab-marquee .t,
+.g-title, html[lang="en"] .g-title,
+.next strong, html[lang="en"] .next strong,
+.player-title, html[lang="en"] .player-title {
+  font-family: var(--title); font-weight: 400; letter-spacing: 0;
+  -webkit-font-smoothing: none; font-smooth: never;
+}
+.cab-marquee .t { font-size: 36px; line-height: 1.1; }
+.cab-marquee .t.long, html[lang="en"] .cab-marquee .t { font-size: 24px; }
+.g-title { font-size: 72px; line-height: 1.05; }
+html[lang="en"] .g-title { font-size: 48px; }
+.next strong, html[lang="en"] .next strong { font-size: 24px; }
+.player-title, html[lang="en"] .player-title { font-size: 24px; }
+@media (max-width: 640px) { .g-title, html[lang="en"] .g-title { font-size: 48px; } }
