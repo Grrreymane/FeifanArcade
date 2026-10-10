@@ -47,3 +47,7 @@ node --experimental-websocket tools/shoot.mjs tools/recipes/rebirthday-shots.mjs
 ```bash
 sh tools/subset-title-font.sh
 ```
+
+## 街机顺序
+
+顺序由 `tools/build-data.mjs` 里的 `ORDER` 决定：**新游戏一律加在最前面**。
