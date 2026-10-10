@@ -1,0 +1,9 @@
+{
+  "friends_only": true,
+  "title": { "zh": "猫猫温泉旅馆", "en": "Purr Springs" },
+  "tagline": { "zh": "开一家猫猫温泉旅馆：接客人、铺被子、送毛巾，一点点扩建成五星" },
+  "howto": { "zh": "按住屏幕拖动就是摇杆，走到哪儿就自动干活；跟着黄色小箭头走不会迷路" },
+  "play_url": "https://grrreymane.github.io/PurrSprings/",
+  "theme": { "c1": "#f5a04a", "c2": "#d9463c", "c3": "#4a3226" },
+  "cabinet": ["cab/title.png", "cab/late.png", "cab/onsen.png", "cab/celebrate.png"]
+}

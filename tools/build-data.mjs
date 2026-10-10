@@ -7,7 +7,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const ORDER = ['fishy-tails', 'rebirthday', 'mouse-cultivation', 'all-under-paw', 'overtime-master', 'lightspeed-escape', 'drained-by-me'];
+const ORDER = ['fishy-tails', 'rebirthday', 'mouse-cultivation', 'all-under-paw', 'overtime-master', 'purr-springs', 'lightspeed-escape', 'drained-by-me'];
 
 const games = ORDER.map(slug => {
   const file = join(root, 'assets', slug, 'data.json');

@@ -41,9 +41,15 @@
       const rank = ['商贾', '舍人', '客卿', '相邦', '仲父', '秦王', '皇帝'][w.rank || 0] || '商贾';
       return `狸家已到${y > 0 ? '前 ' + y : '公元 ' + (1 - y)} 年 · 官至${rank}`;
     },
+    purr() {
+      const s = read('purr-springs-state');
+      if (!s || !s.stats) return null;
+      const n = s.stats.guests || 0, min = Math.max(1, Math.round((s.stats.time || 0) / 60));
+      return s.done ? `五星旅馆！已接待 ${fmt(n)} 位客人` : `已接待 ${fmt(n)} 位客人 · 营业 ${min} 分钟`;
+    },
     // Lightspeed Escape lives on another domain (1gp-studio.github.io), so its save can't be read from here.
   };
-  const NEW = { fishy: '还没下过竿 · 投个币试试？', rebirthday: '还没投过胎 · 投个币试试？', mouse: '鼠鼠还在等你 · 投个币试试？', drained: '零还饿着肚子 · 投个币试试？', paw: '狸家还没开张 · 投个币试试？' };
+  const NEW = { fishy: '还没下过竿 · 投个币试试？', rebirthday: '还没投过胎 · 投个币试试？', mouse: '鼠鼠还在等你 · 投个币试试？', drained: '零还饿着肚子 · 投个币试试？', paw: '狸家还没开张 · 投个币试试？', purr: '旅馆还没开张 · 投个币试试？' };
 
   let played = 0;
   const cabinet = g => {
@@ -74,7 +80,7 @@
       </div>
     </article>`;
   };
-  function saveKey(g) { return { 'fishy-tails': 'fishy', rebirthday: 'rebirthday', 'mouse-cultivation': 'mouse', 'drained-by-me': 'drained', 'all-under-paw': 'paw' }[g.slug]; }
+  function saveKey(g) { return { 'fishy-tails': 'fishy', rebirthday: 'rebirthday', 'mouse-cultivation': 'mouse', 'drained-by-me': 'drained', 'all-under-paw': 'paw', 'purr-springs': 'purr' }[g.slug]; }
 
   function render() {
     played = 0;
