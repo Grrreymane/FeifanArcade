@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 // Cabinet order on the site. Newest games go at the FRONT of this list.
-const ORDER = ['purr-springs', 'overtime-master', 'fishy-tails', 'rebirthday', 'mouse-cultivation', 'all-under-paw', 'lightspeed-escape', 'drained-by-me'];
+const ORDER = ['dragons-appetite', 'purr-springs', 'overtime-master', 'fishy-tails', 'rebirthday', 'mouse-cultivation', 'all-under-paw', 'lightspeed-escape', 'drained-by-me'];
 
 const games = ORDER.map(slug => {
   const file = join(root, 'assets', slug, 'data.json');

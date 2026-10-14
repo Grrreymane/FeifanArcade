@@ -47,16 +47,30 @@
       const n = s.stats.guests || 0, min = Math.max(1, Math.round((s.stats.time || 0) / 60));
       return s.done ? `五星旅馆！已接待 ${fmt(n)} 位客人` : `已接待 ${fmt(n)} 位客人 · 营业 ${min} 分钟`;
     },
+    dragon() {
+      const s = read('dragon_v1');
+      if (!s) return null;
+      const STAGE = ['幼龙', '少年龙', '成龙'];
+      const kinds = [['fire', '火龙'], ['sea', '海龙']].filter(([k]) => s[k] && (s[k].eaten || s[k].playSec));
+      if (!kinds.length) return null;
+      const eaten = kinds.reduce((n, [k]) => n + (s[k].eaten || 0), 0);
+      return kinds.map(([k, name]) => `${name}已是${STAGE[s[k].stage || 0] || '成龙'}`).join(' · ') + ` · 吃了 ${fmt(eaten)} 口`;
+    },
     // Lightspeed Escape lives on another domain (1gp-studio.github.io), so its save can't be read from here.
   };
-  const NEW = { fishy: '还没下过竿 · 投个币试试？', rebirthday: '还没投过胎 · 投个币试试？', mouse: '鼠鼠还在等你 · 投个币试试？', drained: '零还饿着肚子 · 投个币试试？', paw: '狸家还没开张 · 投个币试试？', purr: '旅馆还没开张 · 投个币试试？' };
+  const NEW = { fishy: '还没下过竿 · 投个币试试？', rebirthday: '还没投过胎 · 投个币试试？', mouse: '鼠鼠还在等你 · 投个币试试？', drained: '零还饿着肚子 · 投个币试试？', paw: '狸家还没开张 · 投个币试试？', purr: '旅馆还没开张 · 投个币试试？', dragon: '小龙还饿着呢 · 投个币试试？' };
+
+  // Games this browser has launched from here. Covers games whose saves we can't read (other domain, Godot).
+  const LAUNCHED = 'fa-launched';
+  const launched = new Set((() => { try { return JSON.parse(localStorage.getItem(LAUNCHED)) || []; } catch { return []; } })());
+  const markLaunched = slug => { launched.add(slug); try { localStorage.setItem(LAUNCHED, JSON.stringify([...launched])); } catch {} };
 
   let played = 0;
   const cabinet = g => {
     const th = g.theme || {};
     const reader = SAVES[saveKey(g)];
     const line = reader ? reader() : null;
-    if (line) played++;
+    if (line || launched.has(g.slug)) played++;
     const frames = g.cabinet || [];
     const imgs = frames.map((f, i) => `<img src="${src(g, f)}" alt="" loading="lazy"${i ? '' : ' class="on"'}>`).join('');
     return `
@@ -80,17 +94,17 @@
       </div>
     </article>`;
   };
-  function saveKey(g) { return { 'fishy-tails': 'fishy', rebirthday: 'rebirthday', 'mouse-cultivation': 'mouse', 'drained-by-me': 'drained', 'all-under-paw': 'paw', 'purr-springs': 'purr' }[g.slug]; }
+  function saveKey(g) { return { 'fishy-tails': 'fishy', rebirthday: 'rebirthday', 'mouse-cultivation': 'mouse', 'drained-by-me': 'drained', 'all-under-paw': 'paw', 'purr-springs': 'purr', 'dragons-appetite': 'dragon' }[g.slug]; }
 
   function render() {
     played = 0;
     $('#cabinets').innerHTML = GAMES.map(cabinet).join('');
-    const withSaves = GAMES.filter(g => SAVES[saveKey(g)]).length;
+    const total = GAMES.length;
     const greet = played === 0
       ? '欢迎光临～这是我下班后捣鼓的几个像素小游戏。点屏幕就能玩，手机电脑都行，玩得开心！'
-      : played === withSaves
-        ? '都玩过了？太给面子了！下面是你在每台机子上的存档～'
-        : `欢迎回来！你已经玩过 ${played}/${withSaves} 台，剩下的也去试试？下面能看到你的存档～`;
+      : played >= total
+        ? `${total} 台都玩过了？太给面子了！下面是你在每台机子上的存档～`
+        : `欢迎回来！你已经玩过 ${played}/${total} 台，剩下的也去试试？下面能看到你的存档～`;
     $('#greet').textContent = greet;
     $('#coins').textContent = `CREDIT ${played}`;
     document.querySelectorAll('.bulbs').forEach(b => { b.innerHTML = '<i></i>'.repeat(14); });
@@ -137,6 +151,7 @@
   function play(slug) {
     const g = GAMES.find(x => x.slug === slug);
     if (!g) return;
+    markLaunched(slug);
     // On phones (often inside WeChat) just go to the game; back returns here with the save updated.
     if (matchMedia('(max-width: 700px), (pointer: coarse)').matches) { location.href = g.play_url; return; }
     $('#player-title').textContent = g.title.zh;

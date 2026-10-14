@@ -1,0 +1,10 @@
+{
+  "friends_only": true,
+  "title": { "zh": "小龙大胃王", "en": "Dragon's Appetite" },
+  "tagline": { "zh": "变成一条龙：火龙翱翔天空扎海叼鱼，海龙跃出水面咬海鸥，吃着吃着就长大" },
+  "howto": { "zh": "按住屏幕拖动转向、俯冲、爬升；右下角按钮喷火或冲刺，跟着小目标卡吃就能进化" },
+  "play_url": "https://grrreymane.github.io/DragonsAppetite/",
+  "video": "trailer.mp4",
+  "theme": { "c1": "#ff9a3c", "c2": "#3aa8c8", "c3": "#3a2a50" },
+  "cabinet": ["cab/title.png", "cab/fire.png", "cab/sea.png"]
+}
