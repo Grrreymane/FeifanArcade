@@ -43,6 +43,7 @@ window.GAMES = [
    "c2": "#d9463c",
    "c3": "#4a3226"
   },
+  "video": "trailer.mp4",
   "cabinet": [
    "cab/title.png",
    "cab/late.png",
